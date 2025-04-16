@@ -1,17 +1,19 @@
 package org.tracker_task_cli;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import org.tracker_task_cli.model.Status;
+import org.tracker_task_cli.model.Task;
+
+import java.util.Date;
+
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
-
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+        Task task = new Task.Builder()
+                .setId(1)
+                .setDescription("This is a task")
+                .setStatus(Status.IN_PROGRESS)
+                .setCreatedAt(new Date())
+                .setUpdatedAt(new Date())
+                .build();
+        System.out.println("Task: " + task.getDescription() + " [" + task.getStatus() + "]");
     }
 }

@@ -10,4 +10,10 @@
   "status" : "IN_PROGRESS",
   "createdAt" : 1744872477280,
   "updatedAt" : 1744872477280
+}, {
+  "id" : 3,
+  "description" : "This is a task3",
+  "status" : "IN_PROGRESS",
+  "createdAt" : 1744879181926,
+  "updatedAt" : 1744879181926
 } ]

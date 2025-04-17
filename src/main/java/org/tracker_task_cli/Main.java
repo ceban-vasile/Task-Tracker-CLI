@@ -9,6 +9,8 @@ import org.tracker_task_cli.model.Task;
 import java.util.Date;
 
 public class Main {
+    private static final CommandInvoker invoker = new CommandInvoker();
+
     public static void main(String[] args) {
         Task task = new Task.Builder()
                 .setId(3)

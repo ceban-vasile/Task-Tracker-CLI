@@ -13,11 +13,11 @@ public class TaskFilterContext {
         this.fileHandler = FileHandler.getInstance();
     }
 
-    public void setFilter(TaskFilter strategy) {
+    public void setStrategy(TaskFilter strategy) {
         this.strategy = strategy;
     }
 
-    public List<Task> executeFilter(List<Task> tasks) {
+    public List<Task> executeFilter() {
         List<Task> allTasks = fileHandler.readAllTasks();
 
         return strategy.filter(allTasks);

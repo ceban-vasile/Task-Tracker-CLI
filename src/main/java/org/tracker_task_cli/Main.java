@@ -1,5 +1,6 @@
 package org.tracker_task_cli;
 
+import org.tracker_task_cli.file_management.FileHandler;
 import org.tracker_task_cli.model.Status;
 import org.tracker_task_cli.model.Task;
 
@@ -14,6 +15,7 @@ public class Main {
                 .setCreatedAt(new Date())
                 .setUpdatedAt(new Date())
                 .build();
-        System.out.println("Task: " + task.getDescription() + " [" + task.getStatus() + "]");
+        FileHandler fileHandler = FileHandler.getInstance();
+        fileHandler.write_Task(task);
     }
 }
